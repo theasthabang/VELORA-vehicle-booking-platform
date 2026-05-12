@@ -41,3 +41,24 @@ yarn-error.log*
 next-env.d.ts
 socketServer/.env
 socketServer/node_modules/
+# dependencies
+node_modules/
+socketServer/node_modules/
+velora/node_modules/
+
+# env files
+.env
+.env.local
+.env*
+socketServer/.env
+velora/.env
+velora/.env.local
+
+# next.js
+velora/.next/
+velora/out/
+
+# misc
+.DS_Store
+*.pem
+*.log
