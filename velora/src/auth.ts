@@ -7,6 +7,7 @@ import Google from "next-auth/providers/google"
  
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
+  trustHost: true,   
   providers: [
     Credentials({
         credentials: {
@@ -64,9 +65,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
     jwt({token,user,trigger,session}) {
         if(user){
-            token.id=user.id,
-            token.name=user.name,
-            token.email=user.email,
+            token.id=user.id
+            token.name=user.name
+            token.email=user.email
             token.role=user.role
         }
   if(trigger=="update"){
@@ -78,8 +79,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     },
     session({session,token}) {
         if(session.user){
-            session.user.id=token.id as string,
-            session.user.name=token.name as string,
+            session.user.id=token.id as string
+            session.user.name=token.name as string
             session.user.email=token.email as string
              session.user.role=token.role as string
         }

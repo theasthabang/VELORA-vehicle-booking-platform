@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-//import "./globals.css";
+import "@/global";
 import StoreProvider from "@/redux/StoreProvider";
 import InitUser from "@/initUser";
 import Provider from "@/Provider";
-//import "leaflet/dist/leaflet.css";
+import "leaflet/dist/leaflet";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
