@@ -17,6 +17,7 @@ interface VehicleProps {
     baseFare?: number;
     pricePerKm?: number;
     waitingCharge?: number;
+    [key: string]: any; 
   };
   distanceKm?: number;
   isRecommended?: boolean;
